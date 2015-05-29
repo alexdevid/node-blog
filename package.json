@@ -1,10 +1,12 @@
 {
-    "name": "blog",
-    "description": "Blog app",
-    "version": "0.0.1",
-    "dependencies": {
-        "express": "4.x",
-		"body-parser" : "*",
-        "hbs":"*"
-    }
+	"name": "blog",
+	"description": "Blog app",
+	"version": "0.0.1",
+	"dependencies": {
+		"body-parser": "*",
+		"express": "4.x",
+		"hbs": "*",
+		"mysql": "^2.0.0-alpha8",
+		"orm": "*"
+	}
 }

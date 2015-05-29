@@ -1,28 +1,28 @@
-var express			= require('express');
-var hbs				= require('hbs');
-var bodyParser		= require('body-parser')
+var express = require('express');
+var app = express();
+var hbs = require('hbs');
+var bodyParser = require('body-parser');
+var orm = require('orm');
+var dbconnection = require('./config/db');
 
-var app	= express();
+var db = orm.connect(dbconnection);
 
 app.set('view engine', 'html');
-app.set('view options', { layout: false });
+app.set('view options', {layout: false});
 app.engine('html', hbs.__express);
 
 app.use(express.static('public'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-  extended: true
+	extended: true
 }));
 
+db.load("./models", function(err) {
+	var models = db.models;
+	require("./routes")(app, models);
+});
 
-var api = require('./routes/api');
-var web = require('./routes/web');
-var admin = require('./routes/admin');
-
-app.use('/admin', admin);
-app.use('/api', api);
-app.use('/', web);
 
 
 app.listen(3030);

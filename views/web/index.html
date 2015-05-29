@@ -1,1 +1,12 @@
 <h3>HOME PAGE</h3>
+<table>
+	<tbody>
+		{{#each posts}}
+			<tr>
+				<td>{{this.title}}</td>
+				<td>{{this.description}}</td>
+				<td>{{this.created_at}}</td>
+			</tr>
+		{{/each}}
+	</tbody>
+</table>
