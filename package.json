@@ -4,8 +4,9 @@
 	"version": "0.0.1",
 	"dependencies": {
 		"body-parser": "*",
-		"express": "4.x",
 		"hbs": "*",
+		"express": "4.x",
+		"node-compass": "*",
 		"mysql": "^2.0.0-alpha8",
 		"orm": "*"
 	}

@@ -5,7 +5,7 @@ module.exports = function(db, cb) {
 		title: {type: 'text', required: true},
 		description: {type: 'text', required: false},
 		content: {type: 'text', required: true},
-		status: {type: 'boolean', required: true},
+		status: {type: 'integer', required: true},
 		image: {type: 'text', required: false},
 		created_at: {type: 'date', required: true, time: true}
 	},
