@@ -1,0 +1,12 @@
+<h3>BLOG</h3>
+<table>
+	<tbody>
+		{{#each posts}}
+			<tr>
+				<td>{{this.id}}</td>
+				<td><a href="/blog/{{this.id}}">{{this.title}}</td>
+				<td>{{this.created_at}}</td>
+			</tr>
+		{{/each}}
+	</tbody>
+</table>
