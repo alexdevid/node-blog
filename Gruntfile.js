@@ -24,7 +24,7 @@ module.exports = function(grunt) {
             vendorsCss: {
                 src: [
                     'public/bower/css/*.css',
-                    'src/css/vendors/*.css'
+                    'resources/css/vendors/*.css'
                 ],
                 dest: 'public/assets/css/vendors.css'
             },
