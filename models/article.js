@@ -1,5 +1,4 @@
 var orm = require('orm');
-
 module.exports = function(db, cb) {
 	db.define('article', {
 		title: {type: 'text', required: true},
